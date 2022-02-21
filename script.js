@@ -90,3 +90,25 @@
          
         
         });
+
+
+
+  function showHide() {
+    let boughthistory = document.getElementById('bought');
+    if (boughthistory.value == 1) {
+        document.getElementById('hidden-panel').style.display = 'block';
+    } else {
+        document.getElementById('hidden-panel').style.display = 'none';
+    }
+}
+
+
+        $('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+    
+
+
+$(document).ready(function(){
+  $('.multi_select').selectpicker();
+})
