@@ -1,75 +1,91 @@
-$('body').scrollspy({target: ".navbar"})
 
+    
+     function getOption() {
+         selectElement = document.querySelector('#select1');
+         output = selectElement.value;
+         document.querySelector('.output').textContent = output;
+     }
+    
+ 
+ 
+    
+      //Get the button
+ let mybutton = document.getElementById("btn-back-to-top");
+ 
+ // When the user scrolls down 20px from the top of the document, show the button
+ window.onscroll = function () {
+   scrollFunction();
+ };
+ 
+ function scrollFunction() {
+   if (
+     document.body.scrollTop > 20 ||
+     document.documentElement.scrollTop > 20
+   ) {
+     mybutton.style.display = "block";
+   } else {
+     mybutton.style.display = "none";
+   }
+ }
+ // When the user clicks on the button, scroll to the top of the document
+ mybutton.addEventListener("click", backToTop);
+ 
+ function backToTop() {
+   document.body.scrollTop = 0;
+   document.documentElement.scrollTop = 0;
+ }
 
-$('.my-select').selectpicker();
-//javascript for navigation bar effects on scroll
-window.addEventListener("scroll", function(){
-    const header = document.querySelector("header");
-    header.classList.toggle('sticky', window.scrollY > 0);
-  });
+    
+    
+    
+
+       var newWin;
+   function openPopup()
+   {
+    newWin= window.open('/contact.html','contact','width=700,height=500');
+ 
+    document.onmousedown=focusPopup;
+    document.onkeyup=focusPopup;
+    document.onmousemove=focusPopup;
+   }
+   function focusPopup(){
+     if(!newWin.closed){
+       newWin.focus();
+     }
+   }
   
-  //javascript for responsive navigation sidebar menu
-  const menuBtn = document.querySelector(".menu");
-  const navigation = document.querySelector(".navigation");
-  const navigationItems = document.querySelectorAll(".navigation a")
-  
-  menuBtn.addEventListener("click",  () => {
-    menuBtn.classList.toggle("active");
-    navigation.classList.toggle("active");
-  });
-  
-  navigationItems.forEach((navigationItem) => {
-    navigationItem.addEventListener("click", () => {
-      menuBtn.classList.remove("active");
-      navigation.classList.remove("active");
-    });
-  });
-  
-  //javascript for scroll to top button
-  const scrollBtn = document.querySelector(".scrollToTop-btn");
-  
-  window.addEventListener("scroll", function(){
-    scrollBtn.classList.toggle("active", window.scrollY > 500);
-  });
-  
-  //javascript for scroll back to top on click scroll-to-top button
-  scrollBtn.addEventListener("click", () => {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  });
-  
-  //javascript for reveal website elements on scroll
-  window.addEventListener("scroll", reveal);
-  
-  function reveal(){
-    var reveals = document.querySelectorAll(".reveal");
-  
-    for(var i = 0; i < reveals.length; i++){
-      var windowHeight = window.innerHeight;
-      var revealTop = reveals[i].getBoundingClientRect().top;
-      var revealPoint = 50;
-  
-      if(revealTop < windowHeight - revealPoint){
-        reveals[i].classList.add("active");
-      }
-    }
-  }
+       
+       $('body').scrollspy({target: ".navbar"})
+      
 
 
 
+       //mobile
+       const searchFun = () => {
+        let filter=document.getElementById('myInput').value.toUpperCase();
+        let myTable=document.getElementById('myTable');
+        let tr=myTable.getElementsByTagName('tr');
+        for(var i=0;i<tr.length;i++){
+            let td=tr[i].getElementsByTagName('td')[0];
+            if(td){
+              let textvalue=td.textContent || td.innerHTML;
+              if(textvalue.toUpperCase().indexOf(filter) > -1){
+                tr[i].style.display="";
+              }else{  tr[i].style.display="none";  }
+              }
+            }
+        }
 
 
 
+        //signup
 
-
-
- // Filter table
-
-$(document).ready(function(){
-  $("#tableSearch").on("keyup", function() {
-    var value = $(this).val().toLowerCase();
-    $("#myTable tr").filter(function() {
-      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-    });
-  });
-});
+        var theForm = document.getElementById('myForm');
+        theForm.addEventListener('submit', function(event) {
+          event.preventDefault();
+        
+          var myName = document.getElementById("myName").value;
+          window.alert("Hai,"+myName+"! "+"Go To SingIn");
+         
+        
+        });
