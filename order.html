@@ -381,48 +381,7 @@
       <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     
 
-      <script>
-        var newWin;
-    function openPopup()
-    {
-     newWin= window.open('contact.html','contact','width=700,height=500');
-  
-     document.onmousedown=focusPopup;
-     document.onkeyup=focusPopup;
-     document.onmousemove=focusPopup;
-    }
-    function focusPopup(){
-      if(!newWin.closed){
-        newWin.focus();
-      }
-    }
-      </script>
-
-<script>
- 
-$(document).ready(function(){
-  $('.multi_select').selectpicker();
-})
-
-</script>
-
-
-
-  
-      <script>
-        function showHide() {
-    let boughthistory = document.getElementById('bought');
-    if (boughthistory.value == 1) {
-        document.getElementById('hidden-panel').style.display = 'block';
-    } else {
-        document.getElementById('hidden-panel').style.display = 'none';
-    }
-}</script>
-      <script>
-        $('#myModal').on('shown.bs.modal', function () {
-  $('#myInput').trigger('focus')
-})
-      </script>
+   
       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
