@@ -261,67 +261,7 @@ margin: 25px 25px;
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
-     <script type="text/javascript">
-    function getOption() {
-        selectElement = document.querySelector('#select1');
-        output = selectElement.value;
-        document.querySelector('.output').textContent = output;
-    }
-  </script>
-
-
-
-   //<script>
-     //Get the button
-let mybutton = document.getElementById("btn-back-to-top");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function () {
-  scrollFunction();
-};
-
-function scrollFunction() {
-  if (
-    document.body.scrollTop > 20 ||
-    document.documentElement.scrollTop > 20
-  ) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-// When the user clicks on the button, scroll to the top of the document
-mybutton.addEventListener("click", backToTop);
-
-function backToTop() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
- </script>//  
    
-   
-   
-   
-   <script>
-      var newWin;
-  function openPopup()
-  {
-   newWin= window.open('contact.html','contact','width=700,height=500');
-
-   document.onmousedown=focusPopup;
-   document.onkeyup=focusPopup;
-   document.onmousemove=focusPopup;
-  }
-  function focusPopup(){
-    if(!newWin.closed){
-      newWin.focus();
-    }
-  }
-    </script>
-    <script>
-      
-      $('body').scrollspy({target: ".navbar"})
-      </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
