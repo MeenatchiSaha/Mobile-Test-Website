@@ -9,7 +9,7 @@
  
  
     
-      //Get the button
+   
  let mybutton = document.getElementById("btn-back-to-top");
  
  // When the user scrolls down 20px from the top of the document, show the button
@@ -27,7 +27,8 @@
      mybutton.style.display = "none";
    }
  }
- // When the user clicks on the button, scroll to the top of the document
+
+
  mybutton.addEventListener("click", backToTop);
  
  function backToTop() {
@@ -60,7 +61,7 @@
 
 
 
-       //mobile
+      
        const searchFun = () => {
         let filter=document.getElementById('myInput').value.toUpperCase();
         let myTable=document.getElementById('myTable');
@@ -78,7 +79,7 @@
 
 
 
-        //signup
+     
 
         var theForm = document.getElementById('myForm');
         theForm.addEventListener('submit', function(event) {
