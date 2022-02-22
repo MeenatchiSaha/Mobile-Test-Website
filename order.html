@@ -1,4 +1,4 @@
-
+﻿
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -33,40 +33,9 @@
   </head>
   <body>
     
-  <!--  <nav class="navbar navbar-expand-lg navbar-light " id="navbar" >
-      <a class="navbar-brand" href="#"><img src="images/apple-iphone-xs.jpg" id="logo"/></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-          </li>
-      
-            
-            <li class="nav-item active">
-              <a class="nav-link" href="mobile.html">All Mobiles</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Support
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#"   >Order</a>
-                                  <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#" onclick="openPopup()">Contact Us</a>
-              </div>
-        
-        </ul>
-        
-          <button class="btn btn-warning my-2 my-sm-0" type="submit" onclick="window.location.href='sign.html'" >SIGN IN</button>
-      
-      </div>
-    </nav>-->
- 
-    <!-- end nav bar-->
+  
+             
+         
     <br><br>
         <div class="container" style="padding-left: 10em;">
           <div class="card" style="height: max-content;width: 80%;">
@@ -174,25 +143,21 @@
                       <legend class="col-form-label col-sm-2 pt-0">Brand</legend>
                       <div class="col-sm-4">
 
-                        <div class="form-check">
-                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                          <label class="form-check-label" for="flexRadioDefault1">
-                           Samsung
-                          </label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                          <label class="form-check-label" for="flexRadioDefault2">
-                            Lenovo
-                          </label>
+                        <div class="filter">
+                         
+                          <div class="checkbox">
+                            <label><input type="checkbox" rel="apple" onchange="change()"/>Apple</label>
+                          </div>
+                          <div class="checkbox">
+                            <label><input type="checkbox" rel="samsung" onchange="change()" checked />Samsung</label>
+                          </div>
+                          <div class="checkbox">
+                            <label><input type="checkbox" rel="lenovo" onchange="change()"/>Lenovo</label>
+                          </div>
                         </div>
 
-                        <div class="form-check">
-                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                          <label class="form-check-label" for="flexRadioDefault2">
-                            Apple
-                          </label>
-                        </div>
+
+
 
 
 
@@ -221,21 +186,33 @@
                         <label for="inputState">Model</label>
                       </div>
                         <div class="col-sm-4">
-                          <div class="multi_select_box">
-                            <select class="multi_select" multiple>
-                              <option>Samsung S21 FE </option>
-                              <option>Samsung A13 </option><option>Samsung Z Flip3</option>
-                              <option>Lenovo-k13</option><option>Lenovo-legion-2</option>
-                              <option>Lenovo-a8</option>
-                              <option>Apple XS</option>
-                              <option>Apple 13</option>
-                              <option>Apple 12</option>
-
-                            </select>
-                           
+                          <div class="result">
+                            <div class="samsung">
+                              <select class="multi_select" multiple>
+                                <option name="model1" id="Samsung">Samsung S21 FE </option>
+                                <option name="model1" id="Samsung">Samsung A13 </option>
+                                <option name="model1" id="Samsung">Samsung Z Flip3</option></select>
+                             
+                            </div>
+                            <div class="lenovo">
+                              <select class="multi_select" multiple>
+                                <option name="model1" id="lenovo">Lenovo-k13 </option>
+                                <option name="model1" id="lenovo">Lenovo-legion-2</option>
+                                <option name="model1" id="lenovo">Lenovo-a8</option></select>
                             
                             </div>
-
+                            <div class="apple">
+                              <select class="multi_select" multiple>
+                                <option name="model1" id="apple">Apple XS </option>
+                                <option name="model1" id="apple">Apple 13 </option>
+                                <option name="model1" id="apple">Apple 12</option></select>
+                           
+                            </div>
+                            
+  
+  
+                          
+                        </div>
 
                         
                       </div>
